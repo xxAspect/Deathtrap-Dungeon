@@ -180,6 +180,7 @@ while Victories < 3 and theHero.getHP() > 0: #Plays until either hero dies or wi
     if theHero.getHP() > 0: #If hero is still alive, adds 1 victory, kills monster, starts next fight
         Victories = MonsterDies(Victories)
         Shop(theHero.getGold())
+        ChoiceToPrintInv()
     else: #If hero is dead, ends game
         print("The Death Trap Dungeon claims another victim. You are dead.") 
 
@@ -188,6 +189,3 @@ if Victories == 3: #If 3 monsters have been killed
     print("You leave the dungeon with " + str(theHero.getGold()) + " gold.") #Prints gold collected 
     theHero.PrintInv()
     print("############################## GAME OVER ##############################")
-    
-
-    
